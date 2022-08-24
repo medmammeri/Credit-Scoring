@@ -1,0 +1,11 @@
+# TODO more efficient gitignore
+
+scripts/
+venv/
+.tox
+.pytest_cache
+.mypy_cache
+.coverage
+.idea/
+*.egg-info/
+.ipynb_checkpoints/
