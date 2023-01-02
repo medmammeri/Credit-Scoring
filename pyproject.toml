@@ -1,5 +1,5 @@
 [tool.setuptools_scm]
-write_to = "my_package/_version"
+write_to = "creditscoring/_version"
 write_to_template = """\"\"\"Package version (handled by setuptools_scm)\"\"\"
 __version__ = "{version}"
 """
@@ -11,7 +11,7 @@ build-backend = "setuptools.build_meta"
 # pytest options
 [tool.pytest.ini_options]
 addopts = '''
---cov=my_package
+--cov=creditscoring
 --cov-report=term-missing
 '''
 testpaths = "tests"
@@ -82,7 +82,7 @@ single_line_exclusions = [
 ]
 
 known_first_party = [
-    "my_package",
+    "creditscoring",
     "tests",
 ]
 
