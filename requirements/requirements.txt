@@ -1,4 +1,0 @@
-pandas=1.4.3
-numpy=1.23.2
-pydantic=1.9.2
-python-dotenv

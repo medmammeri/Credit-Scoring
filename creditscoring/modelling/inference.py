@@ -5,6 +5,7 @@ from creditscoring.modelling.utils import load_model
 
 s = Settings()
 
+
 def inference(data: pd.DataFrame, model: Pipeline=None):
 	if model is None:
 		model = load_model()

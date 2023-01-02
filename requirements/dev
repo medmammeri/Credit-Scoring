@@ -1,0 +1,9 @@
+pytest>=6.0
+pytest-cov>=2.0
+mypy>=0.910
+flake8>=3.9
+tox>=3.24
+isort==5.11.4
+# for isort color_output
+colorama==0.4.6
+flake8==6.0.0
