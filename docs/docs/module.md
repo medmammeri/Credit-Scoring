@@ -1,1 +1,1 @@
-::: my_package.example
+::: creditscoring.example
