@@ -1,0 +1,27 @@
+name: Build wheel
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: build
+        run: |
+          mkdir wheels
+          pip3 wheel --no-deps --wheel-dir wheels/ .
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: unknown_name
+          path: |
+            wheels/*.whl
