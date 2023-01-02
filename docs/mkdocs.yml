@@ -1,0 +1,43 @@
+site_name: Documentation template
+repo_url: https://gitlab.com/my_group259/data/data-template
+repo_name: data-template(private)
+site_author: Mohammed Rafik Mammeri
+copyright: Copyright &copy; Mammeri 2023
+features:
+  - navigation.instant
+theme:
+  language: en
+  font:
+    text: IBM Plex Mono
+  icon:
+    repo: fontawesome/brands/gitlab
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: brown
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+nav:
+    - Introduction: 'index.md'
+    - part1: 'module.md'
+
+plugins:
+- mkdocstrings:
+    custom_templates: templates
+    default_handler: python
+    handlers:
+      python:
+        options:
+          show_source: false
