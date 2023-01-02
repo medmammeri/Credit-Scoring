@@ -1,1 +1,1 @@
-::: creditscoring.example
+::: creditscoring
