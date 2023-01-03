@@ -23,7 +23,7 @@ class Settings(pydantic.BaseSettings):
     final_model_name: str = "23h33m43s_24-08-2022.joblib"
     path_final_model: pathlib.Path = path_models / final_model_name
 
-    path_data: pathlib.Path = ".data"
+    path_data: pathlib.Path = pathlib.Path(".data")
     name_train_data: str = "cs-training.csv"
     name_test_data: str = "cs-test.csv"
     target: str = "SeriousDlqin2yrs"

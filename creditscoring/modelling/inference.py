@@ -7,7 +7,7 @@ from creditscoring.settings import Settings
 s = Settings()
 
 
-def inference(data: pd.DataFrame, model: Pipeline = None):
+def inference(data: pd.DataFrame, model: Pipeline = None) -> pd.DataFrame:
     """
     func
     inference

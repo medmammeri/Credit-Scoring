@@ -10,6 +10,7 @@ from sklearn.preprocessing import StandardScaler  # OneHotEncoder
 from creditscoring.modelling.metrics import scorer
 from creditscoring.modelling.preprocessing import get_modelling_data
 from creditscoring.settings import Settings
+from sklearn.base import BaseEstimator
 
 s = Settings()
 
@@ -37,7 +38,7 @@ param_grid = {
 }
 
 
-def train_model(save: bool = True):
+def train_model(save: bool = True) -> BaseEstimator:
     x_train, x_test, y_train, y_test = get_modelling_data()
     pipeline = get_pipeline()
     model_grid_search = GridSearchCV(
