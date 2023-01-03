@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build-wheel:
     runs-on: ubuntu-latest
+    needs: build-wheel
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -27,7 +28,6 @@ jobs:
 
   lint-flake8:
     runs-on: ubuntu-latest
-    needs: build-wheel
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
