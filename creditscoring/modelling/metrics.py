@@ -1,5 +1,5 @@
 from sklearn.metrics import roc_curve, auc, make_scorer
-
+import numpy as np
 
 def gini(y_true, y_score, pos_label=None):
     """
