@@ -1,13 +1,15 @@
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler  # OneHotEncoder
-from sklearn.ensemble import RandomForestClassifier
-import joblib
-from creditscoring.settings import Settings
-from creditscoring.modelling.preprocessing import get_modelling_data
 import time
+
+import joblib
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.impute import SimpleImputer
 from sklearn.model_selection import GridSearchCV
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler  # OneHotEncoder
+
 from creditscoring.modelling.metrics import scorer
+from creditscoring.modelling.preprocessing import get_modelling_data
+from creditscoring.settings import Settings
 
 s = Settings()
 

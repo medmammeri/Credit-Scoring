@@ -1,4 +1,6 @@
-from sklearn.metrics import roc_curve, auc, make_scorer
+from sklearn.metrics import auc
+from sklearn.metrics import make_scorer
+from sklearn.metrics import roc_curve
 
 
 def gini(y_true, y_score, pos_label=None):

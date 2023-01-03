@@ -1,9 +1,10 @@
 # import enum
 # import logging
 # import os
-import pathlib
 # import typing
 from typing import Union
+
+import pathlib
 
 import pydantic
 

@@ -1,5 +1,6 @@
-from creditscoring.settings import Settings
 from joblib import load
+
+from creditscoring.settings import Settings
 
 s = Settings()
 
