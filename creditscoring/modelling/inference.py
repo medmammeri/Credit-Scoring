@@ -8,6 +8,7 @@ s = Settings()
 
 def inference(data: pd.DataFrame, model: Pipeline=None):
 	"""
+	func
 	inference
 	:param data:
 	:param model:
