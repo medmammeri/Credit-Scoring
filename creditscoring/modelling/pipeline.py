@@ -1,6 +1,7 @@
 import time
 
 import joblib
+from sklearn.base import BaseEstimator
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import GridSearchCV
@@ -10,7 +11,6 @@ from sklearn.preprocessing import StandardScaler  # OneHotEncoder
 from creditscoring.modelling.metrics import scorer
 from creditscoring.modelling.preprocessing import get_modelling_data
 from creditscoring.settings import Settings
-from sklearn.base import BaseEstimator
 
 s = Settings()
 
