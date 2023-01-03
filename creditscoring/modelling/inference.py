@@ -7,6 +7,12 @@ s = Settings()
 
 
 def inference(data: pd.DataFrame, model: Pipeline=None):
+	"""
+
+	:param data:
+	:param model:
+	:return:
+	"""
 	if model is None:
 		model = load_model()
 	return model.predict_proba(data)
