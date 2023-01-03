@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build-wheel:
     runs-on: ubuntu-latest
-    # needs: lint-flake8
+    needs: unit-tests
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
