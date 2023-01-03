@@ -6,14 +6,14 @@ from creditscoring.modelling.utils import load_model
 s = Settings()
 
 
-def inference(data: pd.DataFrame, model: Pipeline=None):
-	"""
-	func
-	inference
-	:param data:
-	:param model:
-	:return:
-	"""
-	if model is None:
-		model = load_model()
-	return model.predict_proba(data)
+def inference(data: pd.DataFrame, model: Pipeline = None):
+    """
+    func
+    inference
+    :param data:
+    :param model:
+    :return:
+    """
+    if model is None:
+        model = load_model()
+    return model.predict_proba(data)

@@ -14,14 +14,16 @@ s = Settings()
 x_train, x_test, y_train, y_test = get_modelling_data()
 
 
-
-
 def get_pipeline():
-    return Pipeline(steps=[("imputer", SimpleImputer(strategy="mean")),
-                           ("scaler", StandardScaler()),
-                           ("classifier", RandomForestClassifier())
-                           ]
-                    )
+    return Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="mean")),
+            ("scaler", StandardScaler()),
+            ("classifier", RandomForestClassifier()),
+        ]
+    )
+
+
 param_grid = {
     "imputer__strategy": ["mean"],
     "classifier__max_leaf_nodes": (10, 30),
@@ -31,6 +33,7 @@ param_grid = {
     "classifier__min_samples_split": [5],
     "classifier__n_estimators": [400],
 }
+
 
 def train_model(save: bool = True):
     x_train, x_test, y_train, y_test = get_modelling_data()
@@ -44,6 +47,7 @@ def train_model(save: bool = True):
         model_name = time.strftime("%Hh%Mm%Ss_%d-%m-%Y") + ".joblib"
         joblib.dump(model, s.path_models / model_name)
     return model
+
 
 if __name__ == "__main__":
     train_model(save=True)
