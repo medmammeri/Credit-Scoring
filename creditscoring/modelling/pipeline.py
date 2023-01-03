@@ -1,6 +1,6 @@
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.preprocessing import StandardScaler  # OneHotEncoder
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 from creditscoring.settings import Settings
