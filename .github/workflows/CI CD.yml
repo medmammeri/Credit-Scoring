@@ -23,8 +23,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: wheels
-          path: |
-            wheels/*.whl
+          path: wheels/*.whl
 
   lint-flake8:
     runs-on: ubuntu-latest
@@ -108,9 +107,7 @@ jobs:
           pip3 install ${ISORT}
           pip3 install ${COLORAMA}
       - name: Lint with black
-        run: |
-          isort --check-only .
-          ls -la
+        run: isort --check-only .
 
   unit-tests:
     runs-on: ubuntu-latest
