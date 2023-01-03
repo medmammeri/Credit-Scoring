@@ -1,5 +1,6 @@
 from sklearn.metrics import roc_curve, auc, make_scorer
 
+
 def gini(y_true, y_score, pos_label=None):
     """
     Calculate gini index.
