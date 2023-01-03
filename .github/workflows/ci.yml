@@ -1,4 +1,4 @@
-name: ci
+name: documentation
 on:
   push:
     branches:
@@ -15,4 +15,6 @@ jobs:
         with:
           python-version: 3.x
       - run: make install_doc
-      - run: cd docs && mkdocs gh-deploy --force
+      - run: |
+          cd docs 
+          mkdocs gh-deploy --force
