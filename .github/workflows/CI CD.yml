@@ -5,8 +5,7 @@ on: [push]
 jobs:
   build-wheel:
     runs-on: ubuntu-latest
-    needs: |
-      [lint-black, lint-flake8, lint-isort, lint-mypy, unit-tests, safety-bandit]
+    needs: [lint-black, lint-flake8, lint-isort, lint-mypy, unit-tests, safety-bandit]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
