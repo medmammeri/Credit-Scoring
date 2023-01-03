@@ -2,7 +2,6 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 from creditscoring.settings import Settings
 from creditscoring.modelling.utils import load_model
-import numpy as np
 
 s = Settings()
 
