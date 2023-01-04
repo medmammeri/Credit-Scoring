@@ -3,8 +3,7 @@ repo_url: https://gitlab.com/my_group259/data/data-template
 repo_name: data-template(private)
 site_author: Mohammed Rafik Mammeri
 copyright: Copyright &copy; Mammeri 2023
-features:
-  - navigation.instant
+
 theme:
   language: en
   font:
